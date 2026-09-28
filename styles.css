@@ -1,3 +1,8 @@
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 300; font-display: swap; src: url("assets/fonts/InterTight-300.ttf") format("truetype"); }
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 400; font-display: swap; src: url("assets/fonts/InterTight-400.ttf") format("truetype"); }
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 500; font-display: swap; src: url("assets/fonts/InterTight-500.ttf") format("truetype"); }
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 600; font-display: swap; src: url("assets/fonts/InterTight-600.ttf") format("truetype"); }
+
 :root {
   --bg: #07090a;
   --bg-2: #0d1110;
