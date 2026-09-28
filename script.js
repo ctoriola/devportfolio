@@ -39,8 +39,25 @@
   // Nav hide on scroll down + active link
   const nav = document.querySelector('.nav');
   let lastY = scrollY;
-  const links = [...document.querySelectorAll('.nav-links a')];
-  const sections = links.map((a) => document.querySelector(a.getAttribute('href')));
+
+  // Split page titles into animated characters
+  document.querySelectorAll('[data-split]').forEach((el) => {
+    const text = el.textContent;
+    el.setAttribute('aria-label', text);
+    el.innerHTML = [...text].map((c, i) =>
+      `<span class="ch" aria-hidden="true"><i style="--i:${i}">${c === ' ' ? '&nbsp;' : c}</i></span>`).join('');
+  });
+
+  // Page transitions between internal pages
+  document.querySelectorAll('a[href$=".html"]').forEach((a) => {
+    a.addEventListener('click', (e) => {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || reduce) return;
+      e.preventDefault();
+      document.body.classList.add('leaving');
+      setTimeout(() => { location.href = a.href; }, 320);
+    });
+  });
+  addEventListener('pageshow', () => document.body.classList.remove('leaving'));
 
   // Big type scroll-driven motion
   const rows = [...document.querySelectorAll('.bigtype-row')];
@@ -49,12 +66,6 @@
     const y = scrollY;
     nav.classList.toggle('hide', y > lastY && y > 200);
     lastY = y;
-
-    const mid = innerHeight * 0.4;
-    sections.forEach((s, i) => {
-      const r = s.getBoundingClientRect();
-      links[i].classList.toggle('active', r.top < mid && r.bottom > mid);
-    });
 
     if (!reduce) {
       rows.forEach((row) => {
@@ -137,9 +148,9 @@
   requestAnimationFrame(draw);
 
   // Footer clock (West Africa Time)
-  const clock = document.getElementById('clock');
+  const clocks = document.querySelectorAll('#clock, [data-clock]');
   const fmt = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Africa/Lagos' });
-  const updateClock = () => { clock.textContent = fmt.format(new Date()); };
+  const updateClock = () => { clocks.forEach((c) => { c.textContent = fmt.format(new Date()); }); };
   updateClock();
   setInterval(updateClock, 30000);
   document.getElementById('yr').textContent = new Date().getFullYear();

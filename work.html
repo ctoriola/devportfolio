@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work — Charles Toriola</title>
+<meta name="description" content="Selected projects and production work by Charles Toriola.">
+<meta property="og:title" content="Charles Toriola — Full Stack Developer">
+<meta property="og:image" content="assets/charles-toriola.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="field" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+
+<header class="nav">
+  <a href="index.html" class="logo"><span class="logo-mark">CT</span>toriola</a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="work.html" class="active" aria-current="page">Work</a>
+    <a href="contact.html" class="nav-contact">Contact</a>
+  </nav>
+  <a href="contact.html" class="btn btn-primary btn-sm">Let's talk <span class="dot"></span></a>
+</header>
+
+<main id="top">
+  <section class="page-hero">
+    <div class="beam" aria-hidden="true"></div>
+    <div class="page-hero-inner">
+      <p class="page-crumb mono"><span>02</span> / Work</p>
+      <h1 class="page-title" data-split>Selected work</h1>
+      <p class="page-sub">Products I built end to end, and production systems I shipped with teams.</p>
+    </div>
+    <div class="page-rule" aria-hidden="true"></div>
+  </section>
+
+  <section class="cases">
+    <article class="case reveal">
+      <div class="case-num" aria-hidden="true">01</div>
+      <div class="case-body">
+        <p class="mono">Live platform · Built end to end</p>
+        <h2>PitchPerfectAI</h2>
+        <ul>
+          <li>Built the live platform end to end, including frontend, authentication, database and AI model-selection logic; 15 demo users generated 40+ pitch decks.</li>
+          <li>Implemented GitHub project and document parsing, AI-generated deck content and PowerPoint export, with GitHub OAuth and token-based usage controls.</li>
+        </ul>
+        <div class="chips"><span>Python Flask</span><span>Firebase Firestore</span><span>Tailwind CSS</span><span>Gemini AI</span></div>
+      </div>
+    </article>
+    <article class="case reveal">
+      <div class="case-num" aria-hidden="true">02</div>
+      <div class="case-body">
+        <p class="mono">Security · File sharing</p>
+        <h2>NCrypt</h2>
+        <ul>
+          <li>Built a file-sharing application with browser-side AES-GCM encryption, share-ID retrieval and an administrative interface.</li>
+        </ul>
+        <div class="chips"><span>React</span><span>Flask</span><span>Web Crypto API</span><span>Firebase</span></div>
+        <a class="card-link" href="https://github.com/ctoriola" target="_blank" rel="noopener">View code ↗</a>
+      </div>
+    </article>
+    <article class="case reveal">
+      <div class="case-num" aria-hidden="true">03</div>
+      <div class="case-body">
+        <p class="mono">Operations · Queue management</p>
+        <h2>Orderly</h2>
+        <ul>
+          <li>Developed queue-management workflows with QR-based location access, queue status tracking and administrator controls; added DynamoDB and S3 integrations.</li>
+        </ul>
+        <div class="chips"><span>Python Flask</span><span>AWS DynamoDB</span><span>Amazon S3</span></div>
+        <a class="card-link" href="https://github.com/ctoriola" target="_blank" rel="noopener">View code ↗</a>
+      </div>
+    </article>
+  </section>
+
+  <!-- BIG TYPE -->
+  <section class="bigtype" aria-hidden="true">
+    <div class="bigtype-row" data-dir="-1">Deployed to 100+ schools · Deployed to 100+ schools ·</div>
+    <div class="bigtype-row alt" data-dir="1">Built end to end · Built end to end · Built end to end ·</div>
+  </section>
+
+  <section class="client-work">
+    <div class="section-head">
+      <p class="eyebrow reveal">Client &amp; team work</p>
+      <h2 class="reveal">Shipped in production</h2>
+    </div>
+    <div class="client-grid">
+      <div class="client reveal"><p class="mono">PrimeTEK Group · 2026</p><h3>PrimeTEK, IDML &amp; FIPCO websites</h3><p>Corporate websites and landing pages delivered in February 2026, translating each company's branding into frontend layouts.</p></div>
+      <div class="client reveal"><p class="mono">Wepluz Technologies</p><h3>School management system</h3><p>Deployed to over 100 schools, including larger schools with more than 500 students each.</p></div>
+      <div class="client reveal"><p class="mono">Wepluz Technologies</p><h3>E-commerce platform</h3><p>Delivered an e-commerce platform with 40+ users.</p></div>
+      <div class="client reveal"><p class="mono">Wepluz Technologies</p><h3>Trading system</h3><p>A trading system supporting more than 20 accounts.</p></div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="horizon" aria-hidden="true"></div>
+    <p class="eyebrow reveal">Have a project in mind?</p>
+    <h2 class="contact-title reveal">Let's build<br><span class="glow">something real.</span></h2>
+    <div class="hero-cta reveal"><a href="contact.html" class="btn btn-primary">Start a conversation <span class="dot"></span></a></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>© <span id="yr">2026</span> Charles Toriola</span>
+  <span class="mono">Abuja, Nigeria · <span id="clock">--:--</span> WAT</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
