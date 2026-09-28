@@ -18,14 +18,17 @@
 
 
 <header class="nav">
-  <a href="index.html" class="logo"><span class="logo-mark">CT</span>toriola</a>
-  <nav class="nav-links" aria-label="Primary">
+  <div class="nav-brand">
+    <a href="index.html" class="logo" aria-label="Charles Toriola — Home"><span class="logo-mark">CT</span></a>
+    <div class="nav-tag"><span>Full Stack Developer</span><span>PHP · Python · JavaScript</span></div>
+  </div>
+  <nav class="nav-pill" aria-label="Primary">
     <a href="index.html" class="active" aria-current="page">Home</a>
     <a href="about.html">About</a>
     <a href="work.html">Work</a>
-    <a href="contact.html" class="nav-contact">Contact</a>
+    <a href="contact.html">Contact</a>
   </nav>
-  <a href="contact.html" class="btn btn-primary btn-sm">Let's talk <span class="dot"></span></a>
+  <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Let's talk <span class="dot"></span></a>
 </header>
 
 <main id="top">
@@ -110,28 +113,31 @@
         <div class="card-glow"></div>
         <div class="card-art art-deck" aria-hidden="true"><i></i><i></i><i></i></div>
         <p class="mono card-idx">01 — Live platform</p>
-        <h3>PitchPerfectAI</h3>
+        <h3><a href="pitchperfectai.html">PitchPerfectAI</a></h3>
         <p>Built the live platform end to end, including frontend, authentication, database and AI model-selection logic; 15 demo users generated 40+ pitch decks.</p>
         <p>Implemented GitHub project and document parsing, AI-generated deck content and PowerPoint export, with GitHub OAuth and token-based usage controls.</p>
         <div class="chips"><span>Python Flask</span><span>Firebase Firestore</span><span>Tailwind CSS</span><span>Gemini AI</span></div>
+        <a class="card-link" href="pitchperfectai.html">Case study →</a>
       </article>
       <article class="card reveal" data-tilt>
         <div class="card-glow"></div>
         <div class="card-art art-lock" aria-hidden="true"><b></b></div>
         <p class="mono card-idx">02 — Security</p>
-        <h3>NCrypt</h3>
+        <h3><a href="ncrypt.html">NCrypt</a></h3>
         <p>A file-sharing application with browser-side AES-GCM encryption, share-ID retrieval and an administrative interface.</p>
         <div class="chips"><span>React</span><span>Flask</span><span>Web Crypto API</span><span>Firebase</span></div>
-        <a class="card-link" href="https://github.com/ctoriola" target="_blank" rel="noopener">Code ↗</a>
+        <a class="card-link" href="ncrypt.html">Case study →</a>
+        
       </article>
       <article class="card reveal" data-tilt>
         <div class="card-glow"></div>
         <div class="card-art art-queue" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
         <p class="mono card-idx">03 — Operations</p>
-        <h3>Orderly</h3>
+        <h3><a href="orderly.html">Orderly</a></h3>
         <p>Queue-management workflows with QR-based location access, queue status tracking and administrator controls; DynamoDB and S3 integrations.</p>
         <div class="chips"><span>Python Flask</span><span>AWS DynamoDB</span><span>Amazon S3</span></div>
-        <a class="card-link" href="https://github.com/ctoriola" target="_blank" rel="noopener">Code ↗</a>
+        <a class="card-link" href="orderly.html">Case study →</a>
+        
       </article>
     </div>
     <div class="more reveal"><a href="work.html" class="btn btn-ghost">See all work →</a></div>

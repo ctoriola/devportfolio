@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NCrypt — Charles Toriola</title>
+<meta name="description" content="Share files with end-to-end encryption. Files are encrypted in the browser before they ever leave your device.">
+<meta property="og:title" content="Charles Toriola — Full Stack Developer">
+<meta property="og:image" content="assets/charles-toriola.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="field" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+
+<header class="nav">
+  <div class="nav-brand">
+    <a href="index.html" class="logo" aria-label="Charles Toriola — Home"><span class="logo-mark">CT</span></a>
+    <div class="nav-tag"><span>Full Stack Developer</span><span>PHP · Python · JavaScript</span></div>
+  </div>
+  <nav class="nav-pill" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="work.html" class="active" aria-current="page">Work</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Let's talk <span class="dot"></span></a>
+</header>
+
+<main id="top">
+  <section class="page-hero project-hero">
+    <div class="beam" aria-hidden="true"></div>
+    <div class="page-hero-inner">
+      <p class="page-crumb mono"><a href="work.html">Work</a> / <span>02</span></p>
+      <h1 class="page-title" data-split>NCrypt</h1>
+      <p class="page-sub">Share files with end-to-end encryption. Files are encrypted in the browser before they ever leave your device.</p>
+      <dl class="project-meta">
+        <div><dt class="mono">Type</dt><dd>Security · Encrypted file transfer</dd></div>
+        <div><dt class="mono">Role</dt><dd>Full stack — frontend, API & admin</dd></div>
+        <div class="project-links"><a class="btn btn-primary" href="https://ncryp.netlify.app" target="_blank" rel="noopener">Live demo ↗</a></div>
+      </dl>
+    </div>
+    <div class="page-rule" aria-hidden="true"></div>
+  </section>
+
+  <section class="project-body">
+    <div class="project-grid">
+      <aside class="project-side">
+        <p class="eyebrow reveal">Overview</p>
+      </aside>
+      <div>
+        <p class="project-lead reveal">NCrypt is a client-side encrypted file transfer app. Upload a file, get a short share ID, and send it to anyone — no accounts needed. Because encryption happens in the browser, the server only ever stores ciphertext.</p>
+        <div class="stats stats-3"><div class="stat reveal"><strong>AES-GCM</strong><span>256-bit encryption</span></div><div class="stat reveal"><strong>100k</strong><span>PBKDF2 iterations</span></div><div class="stat reveal"><strong>8-char</strong><span>Share IDs</span></div></div>
+      </div>
+    </div>
+
+    <div class="project-grid">
+      <aside class="project-side"><p class="eyebrow reveal">How it works</p></aside>
+      <ol class="flow"><li class="flow-step reveal"><span class="mono">01</span><h3>Encrypt</h3><p>The file is encrypted in a Web Worker with a key derived from your passphrase.</p></li><li class="flow-step reveal"><span class="mono">02</span><h3>Upload</h3><p>Only the ciphertext is sent to the Flask API and stored.</p></li><li class="flow-step reveal"><span class="mono">03</span><h3>Share</h3><p>You receive an 8-character share ID to send to the recipient.</p></li><li class="flow-step reveal"><span class="mono">04</span><h3>Decrypt</h3><p>The recipient finds the file by ID and decrypts it locally in their browser.</p></li></ol>
+    </div>
+
+    <div class="project-grid">
+      <aside class="project-side"><p class="eyebrow reveal">What I built</p></aside>
+      <ul class="built reveal">
+          <li>Browser-side AES-GCM encryption using the Web Crypto API, with keys derived through PBKDF2 (SHA-256, 100,000 iterations).</li>
+          <li>Encryption running in a Web Worker so large files don't freeze the interface.</li>
+          <li>Unique 8-character share IDs for search, retrieval and download.</li>
+          <li>An admin dashboard for visitor statistics, upload and download tracking and stored-file metadata, secured with Firebase Authentication and token verification on the backend.</li>
+          <li>Drag-and-drop uploads with progress tracking, file-type validation, size limits and optional ClamAV malware scanning.</li>
+          <li>Pluggable storage backends and deployment to Netlify (frontend) and Railway (backend).</li>
+      </ul>
+    </div>
+
+    <div class="project-grid">
+      <aside class="project-side"><p class="eyebrow reveal">Stack</p></aside>
+      <div class="chips lg reveal"><span>React</span><span>Vite</span><span>Flask</span><span>Web Crypto API</span><span>Firebase Auth</span><span>Netlify</span><span>Railway</span></div>
+    </div>
+  </section>
+
+  <a class="next-project" href="orderly.html">
+    <span class="mono">Next project — 03</span>
+    <span class="next-name">Orderly <i aria-hidden="true">→</i></span>
+  </a>
+</main>
+
+<footer class="footer">
+  <span>© <span id="yr">2026</span> Charles Toriola</span>
+  <span class="mono">Abuja, Nigeria · <span id="clock">--:--</span> WAT</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+

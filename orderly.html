@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orderly — Charles Toriola</title>
+<meta name="description" content="Replaces physical queues with QR codes — people join from their phone and track their place in real time.">
+<meta property="og:title" content="Charles Toriola — Full Stack Developer">
+<meta property="og:image" content="assets/charles-toriola.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="field" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+
+<header class="nav">
+  <div class="nav-brand">
+    <a href="index.html" class="logo" aria-label="Charles Toriola — Home"><span class="logo-mark">CT</span></a>
+    <div class="nav-tag"><span>Full Stack Developer</span><span>PHP · Python · JavaScript</span></div>
+  </div>
+  <nav class="nav-pill" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="work.html" class="active" aria-current="page">Work</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Let's talk <span class="dot"></span></a>
+</header>
+
+<main id="top">
+  <section class="page-hero project-hero">
+    <div class="beam" aria-hidden="true"></div>
+    <div class="page-hero-inner">
+      <p class="page-crumb mono"><a href="work.html">Work</a> / <span>03</span></p>
+      <h1 class="page-title" data-split>Orderly</h1>
+      <p class="page-sub">Replaces physical queues with QR codes — people join from their phone and track their place in real time.</p>
+      <dl class="project-meta">
+        <div><dt class="mono">Type</dt><dd>Operations · Queue management</dd></div>
+        <div><dt class="mono">Role</dt><dd>Full stack — backend, AWS & admin</dd></div>
+        <div class="project-links"><a class="btn btn-primary" href="https://github.com/ctoriola/orderly-fresh" target="_blank" rel="noopener">View code ↗</a></div>
+      </dl>
+    </div>
+    <div class="page-rule" aria-hidden="true"></div>
+  </section>
+
+  <section class="project-body">
+    <div class="project-grid">
+      <aside class="project-side">
+        <p class="eyebrow reveal">Overview</p>
+      </aside>
+      <div>
+        <p class="project-lead reveal">Orderly is a queue-management system for any location with a line. Each location gets its own QR codes: one to join the queue and one to check status. Administrators manage locations and queues from a dashboard.</p>
+        <div class="stats stats-3"><div class="stat reveal"><strong>QR</strong><span>Join & status codes</span></div><div class="stat reveal"><strong>2</strong><span>Admin tiers</span></div><div class="stat reveal"><strong>AWS</strong><span>DynamoDB + S3</span></div></div>
+      </div>
+    </div>
+
+    <div class="project-grid">
+      <aside class="project-side"><p class="eyebrow reveal">How it works</p></aside>
+      <ol class="flow"><li class="flow-step reveal"><span class="mono">01</span><h3>Scan</h3><p>A visitor scans the location's join QR code.</p></li><li class="flow-step reveal"><span class="mono">02</span><h3>Join</h3><p>They join the queue and get a position and receipt.</p></li><li class="flow-step reveal"><span class="mono">03</span><h3>Track</h3><p>The status page shows their place and how many are waiting.</p></li><li class="flow-step reveal"><span class="mono">04</span><h3>Manage</h3><p>Admins move the queue along from the dashboard.</p></li></ol>
+    </div>
+
+    <div class="project-grid">
+      <aside class="project-side"><p class="eyebrow reveal">What I built</p></aside>
+      <ul class="built reveal">
+          <li>QR-based location access — every location generates a join code and a status code.</li>
+          <li>Queue workflows to join, check position and leave, with waiting counts and estimated wait.</li>
+          <li>Downloadable receipts for each place in the queue.</li>
+          <li>Admin controls to create locations, plus a super-admin tier to create and edit administrators.</li>
+          <li>DynamoDB for queue data and S3 for QR code storage, falling back to local storage when AWS isn't configured.</li>
+      </ul>
+    </div>
+
+    <div class="project-grid">
+      <aside class="project-side"><p class="eyebrow reveal">Stack</p></aside>
+      <div class="chips lg reveal"><span>Python Flask</span><span>AWS DynamoDB</span><span>Amazon S3</span><span>Jinja2</span><span>Vercel</span></div>
+    </div>
+  </section>
+
+  <a class="next-project" href="pitchperfectai.html">
+    <span class="mono">Next project — 01</span>
+    <span class="next-name">PitchPerfectAI <i aria-hidden="true">→</i></span>
+  </a>
+</main>
+
+<footer class="footer">
+  <span>© <span id="yr">2026</span> Charles Toriola</span>
+  <span class="mono">Abuja, Nigeria · <span id="clock">--:--</span> WAT</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+

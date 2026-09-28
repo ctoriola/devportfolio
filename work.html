@@ -18,14 +18,17 @@
 
 
 <header class="nav">
-  <a href="index.html" class="logo"><span class="logo-mark">CT</span>toriola</a>
-  <nav class="nav-links" aria-label="Primary">
+  <div class="nav-brand">
+    <a href="index.html" class="logo" aria-label="Charles Toriola — Home"><span class="logo-mark">CT</span></a>
+    <div class="nav-tag"><span>Full Stack Developer</span><span>PHP · Python · JavaScript</span></div>
+  </div>
+  <nav class="nav-pill" aria-label="Primary">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="work.html" class="active" aria-current="page">Work</a>
-    <a href="contact.html" class="nav-contact">Contact</a>
+    <a href="contact.html">Contact</a>
   </nav>
-  <a href="contact.html" class="btn btn-primary btn-sm">Let's talk <span class="dot"></span></a>
+  <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Let's talk <span class="dot"></span></a>
 </header>
 
 <main id="top">
@@ -44,36 +47,39 @@
       <div class="case-num" aria-hidden="true">01</div>
       <div class="case-body">
         <p class="mono">Live platform · Built end to end</p>
-        <h2>PitchPerfectAI</h2>
+        <h2><a href="pitchperfectai.html">PitchPerfectAI</a></h2>
         <ul>
           <li>Built the live platform end to end, including frontend, authentication, database and AI model-selection logic; 15 demo users generated 40+ pitch decks.</li>
           <li>Implemented GitHub project and document parsing, AI-generated deck content and PowerPoint export, with GitHub OAuth and token-based usage controls.</li>
         </ul>
         <div class="chips"><span>Python Flask</span><span>Firebase Firestore</span><span>Tailwind CSS</span><span>Gemini AI</span></div>
+        <a class="card-link" href="pitchperfectai.html">Read case study →</a>
       </div>
     </article>
     <article class="case reveal">
       <div class="case-num" aria-hidden="true">02</div>
       <div class="case-body">
         <p class="mono">Security · File sharing</p>
-        <h2>NCrypt</h2>
+        <h2><a href="ncrypt.html">NCrypt</a></h2>
         <ul>
           <li>Built a file-sharing application with browser-side AES-GCM encryption, share-ID retrieval and an administrative interface.</li>
         </ul>
         <div class="chips"><span>React</span><span>Flask</span><span>Web Crypto API</span><span>Firebase</span></div>
-        <a class="card-link" href="https://github.com/ctoriola" target="_blank" rel="noopener">View code ↗</a>
+        <a class="card-link" href="ncrypt.html">Read case study →</a>
+        
       </div>
     </article>
     <article class="case reveal">
       <div class="case-num" aria-hidden="true">03</div>
       <div class="case-body">
         <p class="mono">Operations · Queue management</p>
-        <h2>Orderly</h2>
+        <h2><a href="orderly.html">Orderly</a></h2>
         <ul>
           <li>Developed queue-management workflows with QR-based location access, queue status tracking and administrator controls; added DynamoDB and S3 integrations.</li>
         </ul>
         <div class="chips"><span>Python Flask</span><span>AWS DynamoDB</span><span>Amazon S3</span></div>
-        <a class="card-link" href="https://github.com/ctoriola" target="_blank" rel="noopener">View code ↗</a>
+        <a class="card-link" href="orderly.html">Read case study →</a>
+        
       </div>
     </article>
   </section>

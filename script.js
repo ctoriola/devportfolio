@@ -36,9 +36,19 @@
   }, { threshold: 0.6 });
   document.querySelectorAll('[data-count]').forEach((el) => countIO.observe(el));
 
-  // Nav hide on scroll down + active link
+  // Nav: pill docks beside the CTA, glides to centre on scroll
   const nav = document.querySelector('.nav');
-  let lastY = scrollY;
+  const pill = nav.querySelector('.nav-pill');
+  const cta = nav.querySelector('.nav-cta');
+  // Docked beside the CTA at the top; centred once the page scrolls
+  const placePill = () => {
+    if (innerWidth <= 900) { pill.style.left = ''; return; }
+    const docked = cta.offsetLeft - pill.offsetWidth - 8;
+    const centred = (innerWidth - pill.offsetWidth) / 2;
+    pill.style.left = `${nav.classList.contains('scrolled') ? centred : docked}px`;
+  };
+  addEventListener('resize', placePill);
+  setTimeout(() => nav.classList.add('ready'), 350);
 
   // Split page titles into animated characters
   document.querySelectorAll('[data-split]').forEach((el) => {
@@ -64,8 +74,8 @@
 
   const onScroll = () => {
     const y = scrollY;
-    nav.classList.toggle('hide', y > lastY && y > 200);
-    lastY = y;
+    nav.classList.toggle('scrolled', y > 40);
+    placePill();
 
     if (!reduce) {
       rows.forEach((row) => {
