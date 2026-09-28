@@ -457,4 +457,5 @@ body.leaving main { opacity: 0; transform: translateY(-10px); transition: opacit
 .card-flow li:last-child { border-bottom: 1px solid var(--line); }
 .card-flow .mono { color: var(--green); padding-top: 3px; }
 .card-flow b { color: var(--text); font-weight: 500; }
-@media (max-width: 520px) { .card-stats strong { font-size: 1.5rem; } .card-stats div { padding: 14px 12px; } }
+/* Single-column layout: no gap to fill, so show the original card copy */
+@media (max-width: 900px) { .card-stats, .card-flow { display: none; } }
