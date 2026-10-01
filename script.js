@@ -58,16 +58,6 @@
       `<span class="ch" aria-hidden="true"><i style="--i:${i}">${c === ' ' ? '&nbsp;' : c}</i></span>`).join('');
   });
 
-  // Page transitions between internal pages
-  document.querySelectorAll('a[href$=".html"]').forEach((a) => {
-    a.addEventListener('click', (e) => {
-      if (e.metaKey || e.ctrlKey || e.shiftKey || reduce) return;
-      e.preventDefault();
-      document.body.classList.add('leaving');
-      setTimeout(() => { location.href = a.href; }, 320);
-    });
-  });
-  addEventListener('pageshow', () => document.body.classList.remove('leaving'));
 
   // Big type scroll-driven motion
   const rows = [...document.querySelectorAll('.bigtype-row')];
@@ -109,7 +99,7 @@
   const ctx = canvas.getContext('2d');
   let w, h, dpr;
   const resize = () => {
-    dpr = Math.min(devicePixelRatio || 1, 2);
+    dpr = Math.min(devicePixelRatio || 1, 1.5);
     w = canvas.width = innerWidth * dpr;
     h = canvas.height = innerHeight * dpr;
   };
@@ -155,7 +145,7 @@
 
     if (!reduce) requestAnimationFrame(draw);
   };
-  requestAnimationFrame(draw);
+  addEventListener("load", () => requestAnimationFrame(draw), { once: true });
 
   // Footer clock (West Africa Time)
   const clocks = document.querySelectorAll('#clock, [data-clock]');

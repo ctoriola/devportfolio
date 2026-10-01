@@ -7,9 +7,8 @@
 <meta name="description" content="Background, experience and skills of Charles Toriola, full stack developer.">
 <meta property="og:title" content="Charles Toriola — Full Stack Developer">
 <meta property="og:image" content="assets/charles-toriola.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/inter-tight-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-tight-500.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -46,7 +45,7 @@
   <section id="about" class="about">
     <div class="about-grid">
       <figure class="portrait reveal">
-        <div class="portrait-frame"><img src="assets/charles-toriola.jpg" alt="Portrait of Charles Toriola" width="800" height="800" loading="lazy"></div>
+        <div class="portrait-frame"><picture><source type="image/webp" srcset="assets/charles-toriola-640.webp 640w, assets/charles-toriola-960.webp 960w" sizes="(max-width: 900px) 92vw, 460px"><img src="assets/charles-toriola-640.jpg" alt="Portrait of Charles Toriola" width="640" height="640" loading="lazy" decoding="async"></picture></div>
         <figcaption><span class="mono">01 /</span> Charles Toriola</figcaption>
       </figure>
       <div class="about-copy">
@@ -155,7 +154,8 @@
   <span class="mono">Abuja, Nigeria · <span id="clock">--:--</span> WAT</span>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
+<script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}],"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"eager"}]}</script>
 </body>
 </html>
 
