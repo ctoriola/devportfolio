@@ -1,0 +1,12 @@
+{
+  "name": "Charles Toriola — Full Stack Developer",
+  "short_name": "Toriola",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#07090a",
+  "theme_color": "#07090a",
+  "icons": [
+    { "src": "/assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

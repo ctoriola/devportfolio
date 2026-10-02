@@ -462,3 +462,9 @@ h3 { font-weight: 500; letter-spacing: -.02em; }
 .card-flow b { color: var(--text); font-weight: 500; }
 /* Single-column layout: no gap to fill, so show the original card copy */
 @media (max-width: 900px) { .card-stats, .card-flow { display: none; } }
+
+/* Backlinks */
+.footer-link { color: var(--text); border-bottom: 1px solid rgba(92,240,138,.4); transition: color .3s, border-color .3s; }
+.footer-link:hover { color: var(--green); border-color: var(--green); }
+.contact-main { margin-top: 36px; color: var(--muted); }
+.contact-main a { color: var(--green); border-bottom: 1px solid rgba(92,240,138,.4); }
